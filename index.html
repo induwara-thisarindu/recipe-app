@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header>
+        <h1>RecipeFinder</h1>
+    </header>
+    <main>
+        <section class="filters">
+            <div class="selection_inputs">
+                <div class="diet_select selections">
+                    <label for="diet"><h2>Diet</h2></label>
+                    <select id="diet" name="diet-type" form="dietform">
+                        <option value="">None</option>
+                        <option value="vegetarian">vegetarian</option>
+                        <option value="gluten-free">gluten-free</option>
+                        <option value="high-protein">high-protein</option>
+                        <option value="low-carb">low-carb</option>
+                        <option value="vegan">vegan</option>
+                        <option value="healthy-fats">healthy-fats</option>
+                        <option value="high-fiber">high-fiber</option>
+                        <option value="low-fat">low-fat</option>
+                    </select>
+                </div>
+                <div class="prep_select selections">
+                    <label for="prep"><h2>Prep Time</h2></label>
+                    <select id="prep" name="prep-time" form="prepform">
+                        <option value="">Any</option>
+                        <option value="10">Up to 10 mins</option>
+                        <option value="20">11–20 mins</option>
+                        <option value="30">21–30 mins</option>
+                        <option value="31">More than 30 mins</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search_bar">
+                <input type="search" id="search_bar" placeholder="Search here...">
+            </div>
+        </section>
+        <section id="recipe-cards">
+
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <nav>
+            <h1>Recipe</h1>
+            <div class="close_btn">
+                <button id="modal_close_btn">x</button>
+            </div>
+        </nav>
+        <div id="modal_content"></div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
